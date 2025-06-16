@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+  background: #f6f0e5;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links .btn {
+  background: #c5a877;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.hero {
+  background: url('https://cdn.decorilla.com/images/2800/ac553f93-1ec5-40d0-9142-fc39457481b2/Decorilla-Online-Interior-Design.jpg?cv=1') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  color: white;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #d1b07f;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #f6f0e5;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* How it Works Section */
+.how-it-works {
+  text-align: center;
+  padding: 60px 30px;
+  background-color: #fff;
+  color: #333;
+}
+
+.how-it-works h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.subheading {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 40px;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.feature {
+  width: 140px;
+  text-align: center;
+  color: #444;
+}
+
+.feature img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  filter: sepia(100%) hue-rotate(30deg) saturate(400%); /* gold tint */
+}
+
+.feature p {
+  font-size: 14px;
+}
+
+.testimonial {
+  background-color: #f7f7f7;
+  padding: 60px 30px;
+}
+
+.testimonial-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.testimonial-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px;
+}
+
+.testimonial-content {
+  max-width: 600px;
+  margin: 20px;
+}
+
+.testimonial-quote {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Georgia', serif;
+}
+
+.testimonial-name {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #111;
+}
+
+.project-slider {
+  padding: 60px 30px;
+  background: #fff;
+  text-align: center;
+}
+
+.project-slider h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.slide-text {
+  width: 40%;
+  text-align: left;
+}
+
+.slide-text h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.slide-text p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.stars {
+  color: #c9a73b;
+  font-size: 18px;
+}
+
+.details-link {
+  text-decoration: underline;
+  color: #444;
+  font-weight: bold;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+.brand-logos {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.brand-logos h2 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.brand-logos p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.logo-container img {
+  max-height: 40px;
+  max-width: 150px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.logo-container img:hover {
+  filter: none;
+}
