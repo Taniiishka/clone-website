@@ -1,0 +1,136 @@
+/* General Layout */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Portfolio Header with Background Image */
+.portfolio-header {
+  background: url('https://cdn.decorilla.com/images/1200/5706645bea5fe8.24781187/Affordable-Online-Living-Dining-Room-Design-interior-design.jpg?cv=1') center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.portfolio-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.portfolio-header p {
+  font-size: 1.2rem;
+}
+
+/* Featured Portfolio Section */
+.portfolio-featured {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-featured h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons .btn {
+  padding: 10px 25px;
+  margin: 0 10px;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-buttons .btn.active,
+.toggle-buttons .btn:hover {
+  background-color: #d4b17d;
+  color: white;
+  border-color: #d4b17d;
+}
+
+/* Main Image */
+.main-image {
+  text-align: center;
+}
+
+.main-image img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+}
+
+/* Thumbnails */
+.gallery-thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-thumbnails img {
+  width: 150px;
+  height: auto;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-thumbnails img:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonial */
+.testimonial {
+  text-align: center;
+  font-style: italic;
+  margin-top: 30px;
+  padding: 0 20px;
+  color: #444;
+}
+
+.client-name {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Reusable Portfolio Sections */
+.portfolio-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.portfolio-section img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 8px;
+}

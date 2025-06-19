@@ -321,3 +321,288 @@ body {
 .logo-container img:hover {
   filter: none;
 }
+
+.testimonials-section {
+  position: relative;
+  background-image: url('https://i.imgur.com/W7v3hnC.jpg'); /* Replace with your background */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  color: #333;
+}
+
+.testimonials-bg {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.testimonials-header h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.testimonials-header p {
+  font-size: 14px;
+}
+.testimonials-header a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Grid layout for testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.testimonial {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.author img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.author div span {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+.benefits-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+.benefit {
+  max-width: 280px;
+  border: 1px solid #e3e3e3;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+}
+.benefit:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.benefit img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+.benefit h4 {
+  font-size: 18px;
+  color: #533e26;
+  margin-bottom: 10px;
+}
+.benefit p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* CTA Section */
+.cta-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f8f8f8;
+}
+.cta-image {
+  flex: 1;
+  min-height: 300px;
+  background-image: url('https://i.imgur.com/pOY2bFl.jpg'); /* replace with your own */
+  background-size: cover;
+  background-position: center;
+}
+.cta-text {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.cta-text h3 {
+  font-size: 24px;
+  color: #533e26;
+  margin-bottom: 20px;
+}
+.cta-button {
+  display: inline-block;
+  background-color: #b59d6c;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.cta-button:hover {
+  background-color: #9a8355;
+}
+
+/* Featured Logos Section */
+.featured-logos {
+  text-align: center;
+  padding: 50px 20px;
+}
+.featured-logos p {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 25px;
+}
+.featured-logos .logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.featured-logos img {
+  height: 25px;
+  object-fit: contain;
+}
+
+
+.cta-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7; /* very light grey */
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-image {
+    flex: 1;
+    min-width: 280px;
+    height: 300px;
+    background-image: url('https://cdn.decorilla.com/images/960/5184b656-9917-4c16-bd90-f1a2b7a8c93b/HighEnd-Online-Interior-Design-Help.jpg?cv=1');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+  }
+
+  .cta-text {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cta-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+
+  .cta-button:hover {
+    background-color: #555;
+  }
+  .site-footer {
+  background-color: #111;
+  color: #fff;
+  padding: 3rem 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.subscribe-column input[type="email"] {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #999;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
