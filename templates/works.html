@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interior Design Landing</title>
-  <link rel="stylesheet" href="../static/style/works.css">
+  
 </head>
 <body>
   <section class="hero-section">
@@ -118,6 +118,144 @@
     <img src="https://cdn.decorilla.com/imgp/png/d8a49169-ab43-47c4-ad1f-71e31f303145/Online-interior-design-process-ends-with-your-dream-room.png" alt="Dream Room Design" class="step-five-img">
   </div>
 </section>
+<section class="get-started-section">
+  <p>Ready to make your dream space a reality?</p>
+  <a href="#" class="btn-started">LET'S GET STARTED</a>
+</section>
+
+<section class="comparison-section">
+  <h2>Decorilla vs Traditional Interior Design</h2>
+  <div class="comparison-table">
+    <table>
+      <thead>
+        <tr>
+          <th>FEATURES</th>
+          <th><img src="https://www.decorilla.com/img/homepage_logo_flat_black.svg" alt="Decorilla" height="20"></th>
+          <th>TRADITIONAL DESIGN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Price</td>
+          <td>$549+</td>
+          <td>$2,000+</td>
+        </tr>
+        <tr>
+          <td>Realistic 3D Model</td>
+          <td>✔</td>
+          <td>✘</td>
+        </tr>
+        <tr>
+          <td>Concepts From Multiple Designers</td>
+          <td>✔</td>
+          <td>✘</td>
+        </tr>
+        <tr>
+          <td>Interactive Online Platform</td>
+          <td>✔</td>
+          <td>✘</td>
+        </tr>
+        <tr>
+          <td>Trade Discounts on Furniture</td>
+          <td>✔</td>
+          <td>✘</td>
+        </tr>
+        <tr>
+          <td>No Markups or Sale Pressure</td>
+          <td>✔</td>
+          <td>✘</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="benefits-section">
+  <div class="benefit">
+    <img src="https://i.pinimg.com/originals/4a/ab/43/4aab438579ba9cff2d28b694b1ca2334.png" alt="Save Time" height="40">
+    <h3>Save Time</h3>
+    <p>
+      Realistic 3D model & top professional help to take the guesswork out of the designing process.
+    </p>
+  </div>
+  <div class="benefit">
+    <img src="https://th.bing.com/th/id/OIP.kxK7gBeB3KfZYBa1gkpt2AHaHa?r=0&rs=1&pid=ImgDetMain" alt="Save Money" height="40">
+    <h3>Save Money</h3>
+    <p>
+      Top talent for up to 80% less than traditional interior design & trade discounts of 5% to 45% at the top vendors.
+    </p>
+  </div>
+  <div class="benefit">
+    <img src="https://static.vecteezy.com/system/resources/previews/020/609/109/original/angry-person-stress-or-anxiety-icon-symbol-frustration-burnout-furious-concept-vector.jpg" alt="Stress Free" height="40">
+    <h3>Convenient & Stress Free</h3>
+    <p>
+      A fun and easy white-glove service including everything from design to convenient ordering.
+    </p>
+  </div>
+</section>
+
+
+
+<section >
+   <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">How long does it take?</button>
+      <div class="faq-answer">
+        We work on your schedule! Typically you’ll receive 2 initial design concepts within a week and then once you choose your favorite designer they will provide revisions based on your feedback and help you source the items. This usually takes one to three weeks.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do you offer in-home services?</button>
+      <div class="faq-answer">
+        Yes, depending on your location, we may offer in-home consultations through our partnered interior designers.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do I have to buy the items right away?</button>
+      <div class="faq-answer">
+        No, you can purchase items at your own pace. Your design and shopping list will remain available.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What happens once I select the winning design?</button>
+      <div class="faq-answer">
+        Your chosen designer will finalize the design, provide a 3D model, floor plan, and a shopping list with links and discounts.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I receive your exclusive furniture discounts?</button>
+      <div class="faq-answer">
+        Your designer will include trade discount links in the shopping list, saving you up to 45% on items.
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      const answer = button.nextElementSibling;
+
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+      } else {
+        answer.style.display = 'block';
+      }
+    });
+  });
+</script>
+
+
+
 
 
 </body>
