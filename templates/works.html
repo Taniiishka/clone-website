@@ -1,45 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interior Design Landing</title>
-  
-</head>
-<body>
-  <!-- Navbar (copied from home.html) -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">DECORILLA</div>
-      <ul class="nav-links">
-        <li><a href="#">How It Works</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="#">Style Quiz</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="#">Gift Cards</a></li>
-        <li><a class="btn" href="#hero">Get Started</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section class="hero-section">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Design, Collaborate, Transform:<br>Our Easy Online Process</h1>
-      <p>
-        Work with our award-winning interior designers to make your dream space come true!
-        Interior design has never been so convenient, simple and fun!
-      </p>
-      <div class="hero-buttons">
-        <a href="#" class="btn-primary">GET STARTED NOW</a>
-        <a href="#" class="btn-secondary">
-          HOW IT WORKS <span class="play-icon">&#9658;</span>
-        </a>
-      </div>
-    </div>
-  </section>
-  <section class="steps-section">
-  <h2>Online Interior Design Services For Any Space</h2>
+{% extends "base.html" %}
 
+{% block title %}How It Works - Decorilla Inspired{% endblock %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/works.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Design, Collaborate, Transform:<br>Our Easy Online Process</h1>
+    <p>
+      Work with our award-winning interior designers to make your dream space come true!
+      Interior design has never been so convenient, simple and fun!
+    </p>
+    <div class="hero-buttons">
+      <a href="#" class="btn-primary">GET STARTED NOW</a>
+      <a href="#" class="btn-secondary">
+        HOW IT WORKS <span class="play-icon">&#9658;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="steps-section">
+  <h2>Online Interior Design Services For Any Space</h2>
+  <!-- Step 1 -->
   <div class="step step-one">
     <img src="https://cdn.decorilla.com/imgp/jpg/545721ad-0616-4c37-8004-611bb8a98739/Online-interior-design-process-begins-with-Telling-us-your-needs-image.jpg" alt="Laptop Woman" class="step-image">
     <div class="step-text">
@@ -52,6 +39,7 @@
     </div>
   </div>
 
+  <!-- Step 2 -->
   <div class="step step-two">
     <div class="step-header">
       <div class="step-number">2</div>
@@ -61,7 +49,6 @@
       Get multiple design concepts based on your assessment and budget.
       Choose your favorite professional designer to help translate your vision.
     </p>
-
     <div class="design-proposals">
       <img src="https://cdn.decorilla.com/imgp/png/a1ff2490-7b40-4dec-9f22-0d06b5e15c23/Online-interior-design-custom-proposals.png" alt="Designer 2">
       <img src="https://cdn.decorilla.com/imgp/png/a1ff2490-7b40-4dec-9f22-0d06b5e15c23/Online-interior-design-custom-proposals.png" alt="Designer 1 (Selected)" class="highlighted">
@@ -69,6 +56,8 @@
     </div>
   </div>
 </section>
+
+<!-- Step 3 -->
 <section class="step-three-section">
   <div class="step-three-container">
     <img src="https://cdn.decorilla.com/imgp/gif/a4b66c54-42f9-4068-8965-4dc42a3bcd28/Online-interior-design-process-3D-renderings.gif" alt="Living Room" class="step-three-img">
@@ -84,31 +73,26 @@
   </div>
 </section>
 
+<!-- What You Receive -->
 <section class="you-receive-section">
   <h2>You’ll Receive</h2>
   <div class="receive-items">
+    {% for item in [
+      ("Multiple-concepts-from-Decorilla-online-interior-design-services.png", "Concepts From Multiple Designers"),
+      ("Constant-communication-with-online-interior-decorators.png", "Constant Communication With Your Chosen Designer"),
+      ("Virtual-interior-design-services-3d-rendering.png", "Final Photorealistic 3D Designs"),
+      ("The-best-online-interior-design-includes-detailed-floorplans.png", "Floor Plan And Color Palette"),
+      ("Curated-shopping-list-from-Decorilla-online-decorating-services.png", "Shopping List And White Glove Concierge Service")
+    ] %}
     <div class="receive-item">
-      <img src="https://cdn.decorilla.com/imgp/png/010cd909-b578-4192-9f73-8001eaa10431/Multiple-concepts-from-Decorilla-online-interior-design-services.png" alt="Concepts">
-      <p>Concepts From Multiple Designers</p>
+      <img src="https://cdn.decorilla.com/imgp/png/{{ item[0] }}" alt="">
+      <p>{{ item[1] }}</p>
     </div>
-    <div class="receive-item">
-      <img src="https://cdn.decorilla.com/imgp/png/4d24d088-a49f-4478-ad8b-02727eaf3e92/Constant-communication-with-online-interior-decorators.png" alt="Communication">
-      <p>Constant Communication With Your Chosen Designer</p>
-    </div>
-    <div class="receive-item">
-      <img src="https://cdn.decorilla.com/imgp/png/47d641d0-0927-426d-bea6-c314e308d354/Virtual-interior-design-services-3d-rendering.png" alt="3D Design">
-      <p>Final Photorealistic 3D Designs</p>
-    </div>
-    <div class="receive-item">
-      <img src="https://cdn.decorilla.com/imgp/png/f5e3c45b-12d5-465d-921f-275f3bbca9cc/The-best-online-interior-design-includes-detailed-floorplans.png" alt="Floor Plan">
-      <p>Floor Plan And Color Palette</p>
-    </div>
-    <div class="receive-item">
-      <img src="https://cdn.decorilla.com/imgp/png/42f56af5-763e-4f6e-8987-52c38c8fa38f/Curated-shopping-list-from-Decorilla-online-decorating-services.png" alt="Shopping List">
-      <p>Shopping List And White Glove Concierge Service</p>
-    </div>
+    {% endfor %}
   </div>
 </section>
+
+<!-- Step 4 -->
 <section class="step-four-section">
   <div class="step-four-container">
     <img src="https://cdn.decorilla.com/imgp/png/1c25e873-6ab2-46a5-8da2-1777a4af14dd/Room-designing-online-shopping-list.png" alt="Order Tracking Laptop" class="step-img">
@@ -123,6 +107,7 @@
   </div>
 </section>
 
+<!-- Step 5 -->
 <section class="step-five-section">
   <div class="step-five-container">
     <div class="step-header">
@@ -132,11 +117,14 @@
     <img src="https://cdn.decorilla.com/imgp/png/d8a49169-ab43-47c4-ad1f-71e31f303145/Online-interior-design-process-ends-with-your-dream-room.png" alt="Dream Room Design" class="step-five-img">
   </div>
 </section>
+
+<!-- CTA -->
 <section class="get-started-section">
   <p>Ready to make your dream space a reality?</p>
   <a href="#" class="btn-started">LET'S GET STARTED</a>
 </section>
 
+<!-- Comparison Table -->
 <section class="comparison-section">
   <h2>Decorilla vs Traditional Interior Design</h2>
   <div class="comparison-table">
@@ -149,178 +137,63 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Price</td>
-          <td>$549+</td>
-          <td>$2,000+</td>
-        </tr>
-        <tr>
-          <td>Realistic 3D Model</td>
-          <td>✔</td>
-          <td>✘</td>
-        </tr>
-        <tr>
-          <td>Concepts From Multiple Designers</td>
-          <td>✔</td>
-          <td>✘</td>
-        </tr>
-        <tr>
-          <td>Interactive Online Platform</td>
-          <td>✔</td>
-          <td>✘</td>
-        </tr>
-        <tr>
-          <td>Trade Discounts on Furniture</td>
-          <td>✔</td>
-          <td>✘</td>
-        </tr>
-        <tr>
-          <td>No Markups or Sale Pressure</td>
-          <td>✔</td>
-          <td>✘</td>
-        </tr>
+        <tr><td>Price</td><td>$549+</td><td>$2,000+</td></tr>
+        <tr><td>Realistic 3D Model</td><td>✔</td><td>✘</td></tr>
+        <tr><td>Concepts From Multiple Designers</td><td>✔</td><td>✘</td></tr>
+        <tr><td>Interactive Online Platform</td><td>✔</td><td>✘</td></tr>
+        <tr><td>Trade Discounts on Furniture</td><td>✔</td><td>✘</td></tr>
+        <tr><td>No Markups or Sale Pressure</td><td>✔</td><td>✘</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
+<!-- Benefits -->
 <section class="benefits-section">
   <div class="benefit">
     <img src="https://i.pinimg.com/originals/4a/ab/43/4aab438579ba9cff2d28b694b1ca2334.png" alt="Save Time" height="40">
     <h3>Save Time</h3>
-    <p>
-      Realistic 3D model & top professional help to take the guesswork out of the designing process.
-    </p>
+    <p>Realistic 3D model & top professional help to take the guesswork out of the designing process.</p>
   </div>
   <div class="benefit">
     <img src="https://th.bing.com/th/id/OIP.kxK7gBeB3KfZYBa1gkpt2AHaHa?r=0&rs=1&pid=ImgDetMain" alt="Save Money" height="40">
     <h3>Save Money</h3>
-    <p>
-      Top talent for up to 80% less than traditional interior design & trade discounts of 5% to 45% at the top vendors.
-    </p>
+    <p>Top talent for up to 80% less than traditional interior design & trade discounts of 5% to 45%.</p>
   </div>
   <div class="benefit">
     <img src="https://static.vecteezy.com/system/resources/previews/020/609/109/original/angry-person-stress-or-anxiety-icon-symbol-frustration-burnout-furious-concept-vector.jpg" alt="Stress Free" height="40">
     <h3>Convenient & Stress Free</h3>
-    <p>
-      A fun and easy white-glove service including everything from design to convenient ordering.
-    </p>
+    <p>A fun and easy white-glove service including everything from design to convenient ordering.</p>
   </div>
 </section>
 
-
-
-<section >
-   <div class="faq-section">
+<!-- FAQ -->
+<section>
+  <div class="faq-section">
     <h2>Frequently Asked Questions</h2>
-
+    {% for q, a in [
+      ("How long does it take?", "You’ll receive 2 concepts in a week, and then final designs after revisions in 1–3 weeks."),
+      ("Do you offer in-home services?", "Yes, depending on your location, we offer in-home consultations."),
+      ("Do I have to buy the items right away?", "No, purchase at your own pace. Your design stays available."),
+      ("What happens once I select the winning design?", "You’ll get a 3D model, floor plan, shopping list, and discounts."),
+      ("How do I receive your exclusive furniture discounts?", "They are included in your final shopping list.")
+    ] %}
     <div class="faq-item">
-      <button class="faq-question">How long does it take?</button>
-      <div class="faq-answer">
-        We work on your schedule! Typically you’ll receive 2 initial design concepts within a week and then once you choose your favorite designer they will provide revisions based on your feedback and help you source the items. This usually takes one to three weeks.
-      </div>
+      <button class="faq-question">{{ q }}</button>
+      <div class="faq-answer">{{ a }}</div>
     </div>
-
-    <div class="faq-item">
-      <button class="faq-question">Do you offer in-home services?</button>
-      <div class="faq-answer">
-        Yes, depending on your location, we may offer in-home consultations through our partnered interior designers.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">Do I have to buy the items right away?</button>
-      <div class="faq-answer">
-        No, you can purchase items at your own pace. Your design and shopping list will remain available.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">What happens once I select the winning design?</button>
-      <div class="faq-answer">
-        Your chosen designer will finalize the design, provide a 3D model, floor plan, and a shopping list with links and discounts.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">How do I receive your exclusive furniture discounts?</button>
-      <div class="faq-answer">
-        Your designer will include trade discount links in the shopping list, saving you up to 45% on items.
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <script>
   const questions = document.querySelectorAll('.faq-question');
-
   questions.forEach(button => {
     button.addEventListener('click', () => {
       button.classList.toggle('active');
       const answer = button.nextElementSibling;
-
-      if (answer.style.display === 'block') {
-        answer.style.display = 'none';
-      } else {
-        answer.style.display = 'block';
-      }
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
     });
   });
 </script>
-
-  <!-- Footer (copied from home.html) -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h4>ABOUT US</h4>
-        <ul>
-          <li><a href="#">The Team</a></li>
-          <li><a href="#">Company</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Design Careers</a></li>
-          <li><a href="#">Press</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>EXPLORE</h4>
-        <ul>
-          <li><a href="#">Style Quiz</a></li>
-          <li><a href="#">Interior Design Blog</a></li>
-          <li><a href="#">Sample Projects</a></li>
-          <li><a href="#">Designer Portfolios</a></li>
-          <li><a href="#">Virtual Interior Design</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Interior Design Gift Cards</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>LOCATIONS</h4>
-        <ul>
-          <li><a href="#">New York</a></li>
-          <li><a href="#">Miami</a></li>
-          <li><a href="#">Los Angeles</a></li>
-          <li><a href="#">Austin</a></li>
-          <li><a href="#">Charlotte</a></li>
-          <li><a href="#">Chicago</a></li>
-          <li><a href="#">Seattle</a></li>
-          <li><a href="#">See All Locations</a></li>
-        </ul>
-      </div>
-      <div class="footer-column subscribe-column">
-        <h4>GET EXCLUSIVE TIPS & OFFERS</h4>
-        <input type="email" placeholder="Enter email address" />
-        <h4>JOIN OUR COMMUNITY</h4>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-pinterest-p"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+{% endblock %}

@@ -1,28 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Our Portfolio | Interior Design</title>
-  <link rel="stylesheet" href="../static/style/portfolio.css">
-</head>
-<body>
+{% extends "base.html" %}
 
-  <!-- Navbar (copied from home.html) -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">DECORILLA</div>
-      <ul class="nav-links">
-        <li><a href="#">How It Works</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="#">Style Quiz</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="#">Gift Cards</a></li>
-        <li><a class="btn" href="#hero">Get Started</a></li>
-      </ul>
-    </nav>
-  </header>
+{% block title %}Our Portfolio | Interior Design{% endblock %}
 
-  <main>
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/portfolio.css') }}">
+{% endblock %}
+
+{% block content %}
+<main>
   <header class="portfolio-header">
     <h1>Our Design Portfolio</h1>
     <p>Explore a selection of our favorite transformations</p>
@@ -56,144 +41,25 @@
     </blockquote>
   </section>
 
-  <!-- Repeatable Portfolio Sections -->
+  {% for section in [
+    ("Black and White Living Room Design", "https://cdn.decorilla.com/images/1200/b2568252-ff4a-4400-bc9b-78762d09cb8d/Online-Living-Room-Design-interior-design-service.jpg?cv=1"),
+    ("Minimalist Bedroom Design", "https://cdn.decorilla.com/images/1200/b9d925c3-68ef-4a6f-95e9-1a4d3cf3cc66/Online-Bedroom-Design-interior-design-samples-1.jpg?cv=1"),
+    ("Modern Kitchen Space", "https://cdn.decorilla.com/images/1200/2466f6eb-bfbd-469c-a670-8344eb614a2f/Online-Kitchen-Design-online-interior-designers.png?cv=1"),
+    ("Cozy Rustic Dining Area", "https://cdn.decorilla.com/images/960/33e9d08a-fe6b-4fad-a5ff-e2330c3ad2e9/Modern-Minimalist-Kitchen-Design.jpeg?cv=1"),
+    ("Urban Chic Home Office", "https://cdn.decorilla.com/images/960/49265952-035a-4445-bcc2-f0ed473c8e46/Scenic-Cabin-Home-Office-Remodel.png?cv=1"),
+    ("Contemporary Master Suite", "https://cdn.decorilla.com/images/1200/e462a026-28b4-4c74-b00f-72c23d5a64d5/Affordable-Bedroom-Design-interior-design.jpeg?cv=1"),
+    ("Scandinavian Guest Bedroom", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/guest-bedroom-ideas-hbx080122laurennelson-008-2-1663862856.jpg"),
+    ("Elegant Bathroom Decor", "https://i.pinimg.com/originals/6f/d6/de/6fd6def01e48e141b9c9cec2ee293ea7.jpg"),
+    ("Boho Lounge Design", "https://th.bing.com/th/id/OIP.cRXpRf3JFLSRBcGyAlZTJAHaJ3?r=0&rs=1&pid=ImgDetMain")
+  ] %}
   <section class="portfolio-section">
-    <h2>Black and White Living Room Design</h2>
-    <img src="https://cdn.decorilla.com/images/1200/b2568252-ff4a-4400-bc9b-78762d09cb8d/Online-Living-Room-Design-interior-design-service.jpg?cv=1" alt="Black and White Living Room" />
+    <h2>{{ section[0] }}</h2>
+    <img src="{{ section[1] }}" alt="{{ section[0] }}" />
     <blockquote class="testimonial">
       “Thank you for all of the beautiful ideas! I just love my new living room design. I love that this is a perfect blend of contemporary without being too cold. Thank you so much for achieving this for us.” 
       <span class="client-name">– Liz</span>
     </blockquote>
   </section>
-
-  <section class="portfolio-section">
-    <h2>Minimalist Bedroom Design</h2>
-    <img src="https://cdn.decorilla.com/images/1200/b9d925c3-68ef-4a6f-95e9-1a4d3cf3cc66/Online-Bedroom-Design-interior-design-samples-1.jpg?cv=1" />
-  <blockquote class="testimonial">
-      “Thank you for all of the beautiful ideas! I just love my new living room design. I love that this is a perfect blend of contemporary without being too cold. Thank you so much for achieving this for us.” 
-      <span class="client-name">– Liz</span>
-    </blockquote>
-  </section>
-
-  <section class="portfolio-section">
-    <h2>Modern Kitchen Space</h2>
-    <img src="https://cdn.decorilla.com/images/1200/2466f6eb-bfbd-469c-a670-8344eb614a2f/Online-Kitchen-Design-online-interior-designers.png?cv=1" alt="Modern Kitchen" />
-  <blockquote class="testimonial">
-      “Thank you for all of the beautiful ideas! I just love my new living room design. I love that this is a perfect blend of contemporary without being too cold. Thank you so much for achieving this for us.” 
-      <span class="client-name">– Liz</span>
-    </blockquote>
-  </section>
-
-  <section class="portfolio-section">
-    <h2>Cozy Rustic Dining Area</h2>
-    <img src="https://cdn.decorilla.com/images/960/33e9d08a-fe6b-4fad-a5ff-e2330c3ad2e9/Modern-Minimalist-Kitchen-Design.jpeg?cv=1" alt="Rustic Dining" />
-  <blockquote class="testimonial">
-      “Thank you for all of the beautiful ideas! I just love my new living room design. I love that this is a perfect blend of contemporary without being too cold. Thank you so much for achieving this for us.” 
-      <span class="client-name">– Liz</span>
-    </blockquote>
-  </section>
-
-  <section class="portfolio-section">
-    <h2>Urban Chic Home Office</h2>
-    <img src="https://cdn.decorilla.com/images/960/49265952-035a-4445-bcc2-f0ed473c8e46/Scenic-Cabin-Home-Office-Remodel.png?cv=1" alt="Chic Office" />
-  <blockquote class="testimonial">
-      “Thank you for all of the beautiful ideas! I just love my new living room design. I love that this is a perfect blend of contemporary without being too cold. Thank you so much for achieving this for us.” 
-      <span class="client-name">– Liz</span>
-    </blockquote>
-  </section>
-
-  <section class="portfolio-section">
-    <h2>Contemporary Master Suite</h2>
-    <img src="https://cdn.decorilla.com/images/1200/e462a026-28b4-4c74-b00f-72c23d5a64d5/Affordable-Bedroom-Design-interior-design.jpeg?cv=1" alt="Master Suite" />
-  <blockquote class="testimonial">
-      “Thank you for all of the beautiful ideas! I just love my new living room design. I love that this is a perfect blend of contemporary without being too cold. Thank you so much for achieving this for us.” 
-      <span class="client-name">– Liz</span>
-    </blockquote>
-  </section>
-
-  <section class="portfolio-section">
-    <h2>Scandinavian Guest Bedroom</h2>
-    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/guest-bedroom-ideas-hbx080122laurennelson-008-2-1663862856.jpg" alt="Guest Bedroom" />
-  <blockquote class="testimonial">
-      “Thank you for all of the beautiful ideas! I just love my new living room design. I love that this is a perfect blend of contemporary without being too cold. Thank you so much for achieving this for us.” 
-      <span class="client-name">– Liz</span>
-    </blockquote>
-  </section>
-
-  <section class="portfolio-section">
-    <h2>Elegant Bathroom Decor</h2>
-    <img src="https://i.pinimg.com/originals/6f/d6/de/6fd6def01e48e141b9c9cec2ee293ea7.jpg" alt="Bathroom Decor" />
-  <blockquote class="testimonial">
-      “Thank you for all of the beautiful ideas! I just love my new living room design. I love that this is a perfect blend of contemporary without being too cold. Thank you so much for achieving this for us.” 
-      <span class="client-name">– Liz</span>
-    </blockquote>
-  </section>
-
-  <section class="portfolio-section">
-    <h2>Boho Lounge Design</h2>
-    <img src="https://th.bing.com/th/id/OIP.cRXpRf3JFLSRBcGyAlZTJAHaJ3?r=0&rs=1&pid=ImgDetMain" alt="Boho Lounge" />
-  <blockquote class="testimonial">
-      “Thank you for all of the beautiful ideas! I just love my new living room design. I love that this is a perfect blend of contemporary without being too cold. Thank you so much for achieving this for us.” 
-      <span class="client-name">– Liz</span>
-    </blockquote>
-  </section>
-  </main>
-
-  <script src="../static/javascript/script.js" defer></script>
-
-  <!-- Footer (copied from home.html) -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h4>ABOUT US</h4>
-        <ul>
-          <li><a href="#">The Team</a></li>
-          <li><a href="#">Company</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Design Careers</a></li>
-          <li><a href="#">Press</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>EXPLORE</h4>
-        <ul>
-          <li><a href="#">Style Quiz</a></li>
-          <li><a href="#">Interior Design Blog</a></li>
-          <li><a href="#">Sample Projects</a></li>
-          <li><a href="#">Designer Portfolios</a></li>
-          <li><a href="#">Virtual Interior Design</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Interior Design Gift Cards</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>LOCATIONS</h4>
-        <ul>
-          <li><a href="#">New York</a></li>
-          <li><a href="#">Miami</a></li>
-          <li><a href="#">Los Angeles</a></li>
-          <li><a href="#">Austin</a></li>
-          <li><a href="#">Charlotte</a></li>
-          <li><a href="#">Chicago</a></li>
-          <li><a href="#">Seattle</a></li>
-          <li><a href="#">See All Locations</a></li>
-        </ul>
-      </div>
-      <div class="footer-column subscribe-column">
-        <h4>GET EXCLUSIVE TIPS & OFFERS</h4>
-        <input type="email" placeholder="Enter email address" />
-        <h4>JOIN OUR COMMUNITY</h4>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-pinterest-p"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+  {% endfor %}
+</main>
+{% endblock %}

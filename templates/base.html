@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Decorilla Inspired Design{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/home.css') }}" />
+  {% block head_extra %}{% endblock %}
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">DECORILLA</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('works') }}">How It Works</a></li>
+
+        <li><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+        <li><a href="#">Style Quiz</a></li>
+        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a class="btn" href="#hero">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page-specific content -->
+  {% block content %}{% endblock %}
+
+  <!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>ABOUT US</h4>
+      <ul>
+        <li><a href="#">The Team</a></li>
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Design Careers</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>EXPLORE</h4>
+      <ul>
+        <li><a href="#">Style Quiz</a></li>
+        <li><a href="#">Interior Design Blog</a></li>
+        <li><a href="#">Sample Projects</a></li>
+        <li><a href="#">Designer Portfolios</a></li>
+        <li><a href="#">Virtual Interior Design</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Interior Design Gift Cards</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>LOCATIONS</h4>
+      <ul>
+        <li><a href="#">New York</a></li>
+        <li><a href="#">Miami</a></li>
+        <li><a href="#">Los Angeles</a></li>
+        <li><a href="#">Austin</a></li>
+        <li><a href="#">Charlotte</a></li>
+        <li><a href="#">Chicago</a></li>
+        <li><a href="#">Seattle</a></li>
+        <li><a href="#">See All Locations</a></li>
+      </ul>
+    </div>
+    <div class="footer-column subscribe-column">
+      <h4>GET EXCLUSIVE TIPS & OFFERS</h4>
+      <input type="email" placeholder="Enter email address" />
+      <h4>JOIN OUR COMMUNITY</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="{{ url_for('static', filename='javascript/script.js') }}" defer></script>
+</body>
+</html>
+<!-- This is the base template for Decorilla's website. It includes a header with navigation links, a footer, and blocks for page-specific content. The CSS and JavaScript files are linked using Flask's url_for function to ensure correct paths. -->
