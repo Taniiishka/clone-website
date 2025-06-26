@@ -1,28 +1,19 @@
-from flask import Flask, render_template
+import os
+from flask import Flask
+from dotenv import load_dotenv
+from db.db import db
+
+load_dotenv()
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-@app.route('/')
-def home():
-    return render_template('home.html')
+db.init_app(app)
 
-@app.route("/portfolio")
-def portfolio():
-    return render_template("portfolio.html")
+# Register blueprints here (example)
+# from routes.main import main as main_blueprint
+# app.register_blueprint(main_blueprint)
 
-
-@app.route('/blog')
-def blog():
-    return render_template('blog.html')
-
-
-@app.route("/works")
-def works():
-    return render_template("works.html")
-
-
-
-
-# Add more routes as needed
 if __name__ == '__main__':
     app.run(debug=True)

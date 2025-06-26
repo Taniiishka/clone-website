@@ -7,6 +7,96 @@
 {% endblock %}
 
 {% block content %}
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+.hero {
+  background: url('https://cdn.decorilla.com/images/2800/ac553f93-1ec5-40d0-9142-fc39457481b2/Decorilla-Online-Interior-Design.jpg?cv=1') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  color: white;
+  border-radius: 10px;
+}
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.cta-button {
+  background-color: #d1b07f;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+.how-it-works {
+  text-align: center;
+  padding: 60px 30px;
+  background-color: #fff;
+  color: #333;
+}
+.how-it-works h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+.subheading {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.video-thumbnail img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+.feature {
+  width: 140px;
+  text-align: center;
+  color: #444;
+}
+.feature img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  filter: sepia(100%) hue-rotate(30deg) saturate(400%);
+}
+.feature p {
+  font-size: 14px;
+}
+</style>
 
 <section class="hero">
   <div class="overlay">

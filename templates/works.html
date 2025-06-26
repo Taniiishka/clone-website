@@ -186,6 +186,11 @@
   </div>
 </section>
 
+<section class="works-list-section">
+  <h2>Our Works</h2>
+  <div id="works-list" class="works-list"></div>
+</section>
+
 <script>
   const questions = document.querySelectorAll('.faq-question');
   questions.forEach(button => {
@@ -194,6 +199,20 @@
       const answer = button.nextElementSibling;
       answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
     });
+  });
+
+fetch('/api/works')
+  .then(response => response.json())
+  .then(data => {
+    const worksList = document.getElementById('works-list');
+    if (!worksList) return;
+    worksList.innerHTML = data.map(work => `
+      <div class="work-item">
+        <h3>${work.title}</h3>
+        <p>${work.description}</p>
+        ${work.image_url ? `<img src="${work.image_url}" alt="${work.title}" style="max-width:300px;">` : ''}
+      </div>
+    `).join('');
   });
 </script>
 {% endblock %}
