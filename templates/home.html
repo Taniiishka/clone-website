@@ -7,111 +7,20 @@
 {% endblock %}
 
 {% block content %}
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Segoe UI', sans-serif;
-}
-.hero {
-  background: url('https://cdn.decorilla.com/images/2800/ac553f93-1ec5-40d0-9142-fc39457481b2/Decorilla-Online-Interior-Design.jpg?cv=1') center/cover no-repeat;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  text-align: center;
-}
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  color: white;
-  border-radius: 10px;
-}
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-.cta-button {
-  background-color: #d1b07f;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 10px;
-}
-.how-it-works {
-  text-align: center;
-  padding: 60px 30px;
-  background-color: #fff;
-  color: #333;
-}
-.how-it-works h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  font-family: 'Georgia', serif;
-}
-.subheading {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 30px;
-}
-.video-thumbnail {
-  position: relative;
-  display: inline-block;
-  max-width: 700px;
-  width: 100%;
-  margin-bottom: 50px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.video-thumbnail img {
-  width: 100%;
-  display: block;
-  border-radius: 10px;
-}
-.features {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 40px;
-}
-.feature {
-  width: 140px;
-  text-align: center;
-  color: #444;
-}
-.feature img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 12px;
-  filter: sepia(100%) hue-rotate(30deg) saturate(400%);
-}
-.feature p {
-  font-size: 14px;
-}
-</style>
 
-<section class="hero">
+<section class="hero" style="background: url('{{ url_for('static', filename='images/' ~ images.hero[0].image_url) }}') center/cover no-repeat;">
   <div class="overlay">
-    <h1>Get a Designer Space You'll Love</h1>
-    <a href="#" class="cta-button">Start My Transformation</a>
+    <h1>{{ images.hero[0].title }}</h1>
+    <a href="{{ url_for('login') }}"class="cta-button">{{ images.hero[0].description }}</a>
   </div>
 </section>
 
+
 <section class="how-it-works">
-  <h2>How it Works: Our Easy Process</h2>
-  <p class="subheading">
-    Choose from unique design concepts from <strong>multiple</strong> accomplished online interior designers
-  </p>
+  <h2>{{ images['how-it-works'][0].title }}</h2>
+  <p class="subheading">{{ images['how-it-works'][0].description }}</p>
   <div class="video-thumbnail">
-    <img src="https://www.decorilla.com/online-decorating/wp-content/uploads/2018/10/modern-interior-design-grey-living-room2.png" alt="Interior Video Thumbnail" />
+    <img src="{{ url_for('static', filename='images/' ~ images['how-it-works'][0].image_url) }}" alt="How It Works Image">
   </div>
   <h2>Work Online With The Finest Interior Designers</h2>
   <p class="subheading">
@@ -204,6 +113,9 @@ body {
   <div class="logo-container">
     <!-- Brand logos here -->
     <img src="https://cdn.decorilla.com/imgp/png/2a50dffd-85b3-49c8-824d-67abe8618629/Crate-And-Barrel-Interior-Design-Services.png?width=250" />
+    <img src="https://cdn.decorilla.com/imgp/png/61203315-0ce5-4e62-ac7b-c8f2d03101aa/Kathy-Kuo-Home-Interior-Design-Services.png?width=250" />
+    <img src="https://cdn.decorilla.com/imgp/png/0be10069-48f5-4c2c-97cc-59e010892aeb/Farrow-And-Ball-Interior-Design-Services.png?width=250" />
+    <img src="https://cdn.decorilla.com/imgp/png/ccb1d253-b085-4741-8dbd-0fd59a31e38e/Perigold-Interior-Design-Services.png?width=250" />
     <!-- Add others as needed -->
   </div>
 </section>

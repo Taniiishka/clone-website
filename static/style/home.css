@@ -42,35 +42,48 @@ body {
 }
 
 .hero {
-  background: url('https://cdn.decorilla.com/images/2800/ac553f93-1ec5-40d0-9142-fc39457481b2/Decorilla-Online-Interior-Design.jpg?cv=1') center/cover no-repeat;
   height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   text-align: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px;
+  padding: 40px 30px;
+  border-radius: 12px;
   color: white;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero h1 {
   font-size: 40px;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .cta-button {
+  margin-top: 10px;
   background-color: #d1b07f;
   color: white;
   padding: 12px 25px;
   text-decoration: none;
   border-radius: 25px;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
+
+.cta-button:hover {
+  background-color: #b8935d;
+}
+
 
 .footer {
   background-color: #f6f0e5;
@@ -605,4 +618,160 @@ body {
 
 .social-icons a:hover {
   color: #fff;
+}
+
+
+.flashes {
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 80%;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.site-footer {
+  background-color: #1d1d1d;
+  color: #ddd;
+  padding: 50px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-brand h2 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+}
+
+.footer-column h4 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.subscribe-form button {
+  padding: 10px;
+  background-color: #ff914d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.subscribe-form button:hover {
+  background-color: #e67e30;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
 }

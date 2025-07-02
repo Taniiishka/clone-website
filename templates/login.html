@@ -1,0 +1,25 @@
+<!-- login.html -->
+{% extends "base.html" %}
+
+{% block title %}Login - Decorilla{% endblock %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/login.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="login-container">
+  <h2>Let's Get Started</h2>
+  <p>A designer space you'll love, at a price you'll love even more!</p>
+
+  <form method="post" action="/login">
+    <label for="email">E-mail</label>
+    <input type="email" name="email" required />
+
+    <label for="password">Password</label>
+    <input type="password" name="password" required />
+
+    <button type="submit" class="submit-btn">Continue</button>
+  </form>
+</div>
+{% endblock %}
